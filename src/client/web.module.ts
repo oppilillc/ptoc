@@ -4,6 +4,7 @@ import { APP_BASE_HREF } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { Http } from '@angular/http';
+import 'hammerjs/hammer';
 
 // libs
 import { StoreModule } from '@ngrx/store';
@@ -12,7 +13,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { TranslateLoader } from '@ngx-translate/core';
 
 // app
-import { APP_COMPONENTS, AppComponent } from './app/components/index';
+import { APP_COMPONENTS, AppComponent, NATIVESCRIPT_WEB_COMPONENTS } from './app/components/index';
 import { routes } from './app/components/app.routes';
 
 // feature modules
@@ -90,8 +91,8 @@ if (String('<%= BUILD_TYPE %>') === 'dev') {
     EffectsModule.run(NameListEffects)
   ],
   declarations: [
-    NSNUMKEY_DIRECTIVES,
-    APP_COMPONENTS
+  APP_COMPONENTS,
+  NATIVESCRIPT_WEB_COMPONENTS
   ],
   providers: [
     {

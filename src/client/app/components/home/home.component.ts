@@ -69,6 +69,7 @@ export class HomeComponent implements OnInit {
     this.days = this.dateDiff(this.asOfDate, this.desiredDate);
     this.newBalance = (this.accrualRate * this.days / this.accrualPeriod);
     this.ptoBalance = +this.beginBalance + +this.newBalance;
+    console.log("ptoBalance:", this.ptoBalance);
 
     return false;
   }
