@@ -13,20 +13,22 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { TranslateLoader } from '@ngx-translate/core';
 
 // app
-import { APP_COMPONENTS, AppComponent, NATIVESCRIPT_WEB_COMPONENTS } from './app/components/index';
+import { APP_COMPONENTS, AppComponent } from './app/components/index';
+//import {NS_COMPONENTS} from './app/modules/shared/components/index';
 import { routes } from './app/components/app.routes';
 
 // feature modules
-import { CoreModule } from './app/shared/core/core.module';
-import { AppReducer } from './app/shared/ngrx/index';
-import { AnalyticsModule } from './app/shared/analytics/analytics.module';
-import { MultilingualModule, translateLoaderFactory } from './app/shared/i18n/multilingual.module';
-import { MultilingualEffects } from './app/shared/i18n/index';
-import { SampleModule } from './app/shared/sample/sample.module';
-import { NameListEffects } from './app/shared/sample/index';
+import { CoreModule } from './app/modules/core/core.module';
+import { AppReducer } from './app/modules/ngrx/index';
+import { AnalyticsModule } from './app/modules/analytics/analytics.module';
+import { MultilingualModule, translateLoaderFactory } from './app/modules/i18n/multilingual.module';
+import { MultilingualEffects } from './app/modules/i18n/index';
+import { SampleModule } from './app/modules/sample/sample.module';
+//import { NameListEffects } from './app/modules/sample/index';
+
 
 // config
-import { Config, WindowService, ConsoleService, createConsoleTarget, provideConsoleTarget, LogTarget, LogLevel, ConsoleTarget } from './app/shared/core/index';
+import { Config, WindowService, ConsoleService, createConsoleTarget, provideConsoleTarget, LogTarget, LogLevel, ConsoleTarget } from './app/modules/core/index';
 Config.PLATFORM_TARGET = Config.PLATFORMS.WEB;
 if (String('<%= BUILD_TYPE %>') === 'dev') {
   // only output console logging in dev mode
@@ -34,10 +36,10 @@ if (String('<%= BUILD_TYPE %>') === 'dev') {
 }
 
 // sample config (extra)
-import { AppConfig } from './app/shared/sample/services/app-config';
-import { MultilingualService } from './app/shared/i18n/services/multilingual.service';
+//import { AppConfig } from './app/modules/sample/services/app-config';
+import { MultilingualService } from './app/modules/i18n/services/multilingual.service';
 // custom i18n language support
-MultilingualService.SUPPORTED_LANGUAGES = AppConfig.SUPPORTED_LANGUAGES;
+//MultilingualService.SUPPORTED_LANGUAGES = AppConfig.GET_SUPPORTED_LANGUAGES();
 
 let routerModule = RouterModule.forRoot(routes);
 
@@ -47,11 +49,14 @@ if (String('<%= TARGET_DESKTOP %>') === 'true') {
   routerModule = RouterModule.forRoot(routes, { useHash: true });
 }
 
-declare var window, console;
+declare var window, console, localStorage;
 
 // For AoT compilation to work:
 export function win() {
   return window;
+}
+export function storage() {
+  return localStorage;
 }
 export function cons() {
   return console;
@@ -74,6 +79,7 @@ if (String('<%= BUILD_TYPE %>') === 'dev') {
     BrowserModule,
     CoreModule.forRoot([
       { provide: WindowService, useFactory: (win) },
+	  //{ provide: StorageService, useFactory: (storage) },
       { provide: ConsoleService, useFactory: (cons) },
       { provide: LogTarget, useFactory: (consoleLogTarget), deps: [ConsoleService], multi: true }
     ]),
@@ -87,18 +93,20 @@ if (String('<%= BUILD_TYPE %>') === 'dev') {
     SampleModule,
     StoreModule.provideStore(AppReducer),
     DEV_IMPORTS,
-    EffectsModule.run(MultilingualEffects),
-    EffectsModule.run(NameListEffects)
+    EffectsModule.run(MultilingualEffects)
+    //EffectsModule.run(NameListEffects)
   ],
   declarations: [
-  APP_COMPONENTS,
-  NATIVESCRIPT_WEB_COMPONENTS
+  APP_COMPONENTS
+  //NS_COMPONENTS
   ],
   providers: [
     {
       provide: APP_BASE_HREF,
       useValue: '<%= APP_BASE %>'
     }
+    // override with supported languages
+    
   ],
   bootstrap: [AppComponent]
 })
