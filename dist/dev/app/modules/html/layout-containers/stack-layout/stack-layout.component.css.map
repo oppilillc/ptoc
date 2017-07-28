@@ -1,0 +1,1 @@
+{"version":3,"sources":["app/modules/html/layout-containers/stack-layout/stack-layout.component.scss"],"names":[],"mappings":"AAAA;EACE,eAAa,EACd","file":"stack-layout.component.css","sourcesContent":[":host {\n  display:block;\n}\n"]}

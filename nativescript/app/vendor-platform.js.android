@@ -1,0 +1,26 @@
+//Resolve JavaScript classes that extend a Java class, and need to resolve
+//their JavaScript module from a bundled script. For example:
+//NativeScriptApplication, NativeScriptActivity, etc.
+//
+//This module gets bundled together with the rest of the app code and the
+//`require` calls get resolved to the correct bundling import call.
+//
+//At runtime the module gets loaded *before* the rest of the app code, so code
+//placed here needs to be careful about its dependencies.
+require('application');
+require('ui/frame');
+require('ui/frame/activity');
+if (global.TNS_WEBPACK) {
+    global.__requireOverride = function (name, dir) {
+        if (name === './tns_modules/application/application.js') {
+            return require('application');
+        }
+        else if (name === './tns_modules/ui/frame/frame.js') {
+            return require('ui/frame');
+        }
+        else if (name === './tns_modules/ui/frame/activity.js') {
+            return require('ui/frame/activity');
+        }
+    };
+}
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidmVuZG9yLXBsYXRmb3JtLmFuZHJvaWQuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJ2ZW5kb3ItcGxhdGZvcm0uYW5kcm9pZC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSwwRUFBMEU7QUFDMUUsNkRBQTZEO0FBQzdELHFEQUFxRDtBQUNyRCxFQUFFO0FBQ0YseUVBQXlFO0FBQ3pFLG1FQUFtRTtBQUNuRSxFQUFFO0FBQ0YsOEVBQThFO0FBQzlFLHlEQUF5RDtBQUV6RCxPQUFPLENBQUMsYUFBYSxDQUFDLENBQUM7QUFDdkIsT0FBTyxDQUFDLFVBQVUsQ0FBQyxDQUFDO0FBQ3BCLE9BQU8sQ0FBQyxtQkFBbUIsQ0FBQyxDQUFDO0FBRTdCLEVBQUUsQ0FBQyxDQUFDLE1BQU0sQ0FBQyxXQUFXLENBQUMsQ0FBQyxDQUFDO0lBQ3JCLE1BQU0sQ0FBQyxpQkFBaUIsR0FBRyxVQUFVLElBQUksRUFBRSxHQUFHO1FBQzFDLEVBQUUsQ0FBQyxDQUFDLElBQUksS0FBSywwQ0FBMEMsQ0FBQyxDQUFDLENBQUM7WUFDdEQsTUFBTSxDQUFDLE9BQU8sQ0FBQyxhQUFhLENBQUMsQ0FBQztRQUNsQyxDQUFDO1FBQUMsSUFBSSxDQUFDLEVBQUUsQ0FBQyxDQUFDLElBQUksS0FBSyxpQ0FBaUMsQ0FBQyxDQUFDLENBQUM7WUFDcEQsTUFBTSxDQUFDLE9BQU8sQ0FBQyxVQUFVLENBQUMsQ0FBQztRQUMvQixDQUFDO1FBQUMsSUFBSSxDQUFDLEVBQUUsQ0FBQyxDQUFDLElBQUksS0FBSyxvQ0FBb0MsQ0FBQyxDQUFDLENBQUM7WUFDdkQsTUFBTSxDQUFDLE9BQU8sQ0FBQyxtQkFBbUIsQ0FBQyxDQUFDO1FBQ3hDLENBQUM7SUFDTCxDQUFDLENBQUM7QUFDTixDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiLy9SZXNvbHZlIEphdmFTY3JpcHQgY2xhc3NlcyB0aGF0IGV4dGVuZCBhIEphdmEgY2xhc3MsIGFuZCBuZWVkIHRvIHJlc29sdmVcclxuLy90aGVpciBKYXZhU2NyaXB0IG1vZHVsZSBmcm9tIGEgYnVuZGxlZCBzY3JpcHQuIEZvciBleGFtcGxlOlxyXG4vL05hdGl2ZVNjcmlwdEFwcGxpY2F0aW9uLCBOYXRpdmVTY3JpcHRBY3Rpdml0eSwgZXRjLlxyXG4vL1xyXG4vL1RoaXMgbW9kdWxlIGdldHMgYnVuZGxlZCB0b2dldGhlciB3aXRoIHRoZSByZXN0IG9mIHRoZSBhcHAgY29kZSBhbmQgdGhlXHJcbi8vYHJlcXVpcmVgIGNhbGxzIGdldCByZXNvbHZlZCB0byB0aGUgY29ycmVjdCBidW5kbGluZyBpbXBvcnQgY2FsbC5cclxuLy9cclxuLy9BdCBydW50aW1lIHRoZSBtb2R1bGUgZ2V0cyBsb2FkZWQgKmJlZm9yZSogdGhlIHJlc3Qgb2YgdGhlIGFwcCBjb2RlLCBzbyBjb2RlXHJcbi8vcGxhY2VkIGhlcmUgbmVlZHMgdG8gYmUgY2FyZWZ1bCBhYm91dCBpdHMgZGVwZW5kZW5jaWVzLlxyXG5cclxucmVxdWlyZSgnYXBwbGljYXRpb24nKTtcclxucmVxdWlyZSgndWkvZnJhbWUnKTtcclxucmVxdWlyZSgndWkvZnJhbWUvYWN0aXZpdHknKTtcclxuXHJcbmlmIChnbG9iYWwuVE5TX1dFQlBBQ0spIHtcclxuICAgIGdsb2JhbC5fX3JlcXVpcmVPdmVycmlkZSA9IGZ1bmN0aW9uIChuYW1lLCBkaXIpIHtcclxuICAgICAgICBpZiAobmFtZSA9PT0gJy4vdG5zX21vZHVsZXMvYXBwbGljYXRpb24vYXBwbGljYXRpb24uanMnKSB7XHJcbiAgICAgICAgICAgIHJldHVybiByZXF1aXJlKCdhcHBsaWNhdGlvbicpO1xyXG4gICAgICAgIH0gZWxzZSBpZiAobmFtZSA9PT0gJy4vdG5zX21vZHVsZXMvdWkvZnJhbWUvZnJhbWUuanMnKSB7XHJcbiAgICAgICAgICAgIHJldHVybiByZXF1aXJlKCd1aS9mcmFtZScpO1xyXG4gICAgICAgIH0gZWxzZSBpZiAobmFtZSA9PT0gJy4vdG5zX21vZHVsZXMvdWkvZnJhbWUvYWN0aXZpdHkuanMnKSB7XHJcbiAgICAgICAgICAgIHJldHVybiByZXF1aXJlKCd1aS9mcmFtZS9hY3Rpdml0eScpO1xyXG4gICAgICAgIH1cclxuICAgIH07XHJcbn1cclxuIl19

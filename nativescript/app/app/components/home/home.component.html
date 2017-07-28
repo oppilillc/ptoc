@@ -1,0 +1,12 @@
+<StackLayout>
+  <StackLayout class="p-10">
+    <Label [text]="'Bacon ipsum'" textWrap="true" ></Label>
+  </StackLayout>
+
+  <StackLayout class="form">
+    <StackLayout class="input-field">
+      <TextField [(ngModel)]="newName" [hint]="'Enter text here'" autocorrect="false" autocapitalizationType="none" class="input"></TextField>
+      <Button [text]="test"></Button>
+    </StackLayout>
+  </StackLayout>
+</StackLayout>

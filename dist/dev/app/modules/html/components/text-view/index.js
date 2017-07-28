@@ -1,0 +1,6 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var text_view_component_1 = require("./text-view.component");
+exports.TextViewComponent = text_view_component_1.TextViewComponent;
+
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC9tb2R1bGVzL2h0bWwvY29tcG9uZW50cy90ZXh0LXZpZXcvaW5kZXgudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSw2REFBMEQ7QUFBakQsa0RBQUEsaUJBQWlCLENBQUEiLCJmaWxlIjoiYXBwL21vZHVsZXMvaHRtbC9jb21wb25lbnRzL3RleHQtdmlldy9pbmRleC5qcyIsInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCB7IFRleHRWaWV3Q29tcG9uZW50IH0gZnJvbSAnLi90ZXh0LXZpZXcuY29tcG9uZW50JztcbiJdfQ==

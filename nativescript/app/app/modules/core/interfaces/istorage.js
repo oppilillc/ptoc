@@ -1,0 +1,7 @@
+Object.defineProperty(exports, "__esModule", { value: true });
+// to limit interaction with localStorage to a certain whitelist, you can list those keys here
+var StorageKey;
+(function (StorageKey) {
+    StorageKey[StorageKey["USERNAME"] = 0] = "USERNAME";
+})(StorageKey = exports.StorageKey || (exports.StorageKey = {}));
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaXN0b3JhZ2UuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJpc3RvcmFnZS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBT0EsOEZBQThGO0FBQzlGLElBQVksVUFFWDtBQUZELFdBQVksVUFBVTtJQUNwQixtREFBUSxDQUFBO0FBQ1YsQ0FBQyxFQUZXLFVBQVUsR0FBVixrQkFBVSxLQUFWLGtCQUFVLFFBRXJCIiwic291cmNlc0NvbnRlbnQiOlsiLy8gc3RhbmRhcmQgbG9jYWxTdG9yYWdlIGludGVyZmFjZVxyXG5leHBvcnQgaW50ZXJmYWNlIElTdG9yYWdlIHtcclxuICBzZXRJdGVtKGtleTogU3RvcmFnZUtleSwgdmFsdWU6IGFueSk6IHZvaWQ7XHJcbiAgZ2V0SXRlbShrZXk6IFN0b3JhZ2VLZXkpOiBhbnk7XHJcbiAgcmVtb3ZlSXRlbShrZXk6IFN0b3JhZ2VLZXkpOiB2b2lkO1xyXG59XHJcblxyXG4vLyB0byBsaW1pdCBpbnRlcmFjdGlvbiB3aXRoIGxvY2FsU3RvcmFnZSB0byBhIGNlcnRhaW4gd2hpdGVsaXN0LCB5b3UgY2FuIGxpc3QgdGhvc2Uga2V5cyBoZXJlXHJcbmV4cG9ydCBlbnVtIFN0b3JhZ2VLZXkge1xyXG4gIFVTRVJOQU1FXHJcbn1cclxuIl19

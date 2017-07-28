@@ -1,0 +1,35 @@
+Object.defineProperty(exports, "__esModule", { value: true });
+// angular
+var core_1 = require("@angular/core");
+// libs
+var angulartics2_1 = require("angulartics2");
+// TODO: This is a wip at the moment
+// Will implement native segment sdk soon
+// https://github.com/NathanWalker/nativescript-segment/issues/1
+var NSAngulartics2Segment = (function (_super) {
+    __extends(NSAngulartics2Segment, _super);
+    function NSAngulartics2Segment(angulartics2) {
+        var _this = _super.call(this, angulartics2) || this;
+        angulartics2.pageTrack.subscribe(function (x) { return _this.pageTrack(x.path, x.location); });
+        angulartics2.eventTrack.subscribe(function (x) { return _this.eventTrack(x.action, x.properties); });
+        angulartics2.setUserProperties.subscribe(function (x) { return _this.setUserProperties(x); });
+        angulartics2.setUserPropertiesOnce.subscribe(function (x) { return _this.setUserProperties(x); });
+        return _this;
+    }
+    NSAngulartics2Segment.prototype.pageTrack = function (path, location) {
+        // TODO
+    };
+    NSAngulartics2Segment.prototype.eventTrack = function (action, properties) {
+        // TODO
+    };
+    NSAngulartics2Segment.prototype.setUserProperties = function (properties) {
+        // TODO
+    };
+    return NSAngulartics2Segment;
+}(angulartics2_1.Angulartics2Segment));
+NSAngulartics2Segment = __decorate([
+    core_1.Injectable(),
+    __metadata("design:paramtypes", [angulartics2_1.Angulartics2])
+], NSAngulartics2Segment);
+exports.NSAngulartics2Segment = NSAngulartics2Segment;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoibnMtYW5ndWxhcnRpY3MyLXNlZ21lbnQuc2VydmljZS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIm5zLWFuZ3VsYXJ0aWNzMi1zZWdtZW50LnNlcnZpY2UudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUFBLFVBQVU7QUFDVixzQ0FBMkM7QUFFM0MsT0FBTztBQUNQLDZDQUFpRTtBQUVqRSxvQ0FBb0M7QUFDcEMseUNBQXlDO0FBQ3pDLGdFQUFnRTtBQUdoRSxJQUFhLHFCQUFxQjtJQUFTLHlDQUFtQjtJQUU1RCwrQkFBWSxZQUEwQjtRQUF0QyxZQUNFLGtCQUFNLFlBQVksQ0FBQyxTQUtwQjtRQUpDLFlBQVksQ0FBQyxTQUFTLENBQUMsU0FBUyxDQUFDLFVBQUMsQ0FBTSxJQUFLLE9BQUEsS0FBSSxDQUFDLFNBQVMsQ0FBQyxDQUFDLENBQUMsSUFBSSxFQUFFLENBQUMsQ0FBQyxRQUFRLENBQUMsRUFBbEMsQ0FBa0MsQ0FBQyxDQUFDO1FBQ2pGLFlBQVksQ0FBQyxVQUFVLENBQUMsU0FBUyxDQUFDLFVBQUMsQ0FBTSxJQUFLLE9BQUEsS0FBSSxDQUFDLFVBQVUsQ0FBQyxDQUFDLENBQUMsTUFBTSxFQUFFLENBQUMsQ0FBQyxVQUFVLENBQUMsRUFBdkMsQ0FBdUMsQ0FBQyxDQUFDO1FBQ3ZGLFlBQVksQ0FBQyxpQkFBaUIsQ0FBQyxTQUFTLENBQUMsVUFBQyxDQUFNLElBQUssT0FBQSxLQUFJLENBQUMsaUJBQWlCLENBQUMsQ0FBQyxDQUFDLEVBQXpCLENBQXlCLENBQUMsQ0FBQztRQUNoRixZQUFZLENBQUMscUJBQXFCLENBQUMsU0FBUyxDQUFDLFVBQUMsQ0FBTSxJQUFLLE9BQUEsS0FBSSxDQUFDLGlCQUFpQixDQUFDLENBQUMsQ0FBQyxFQUF6QixDQUF5QixDQUFDLENBQUM7O0lBQ3RGLENBQUM7SUFFTSx5Q0FBUyxHQUFoQixVQUFpQixJQUFZLEVBQUUsUUFBYTtRQUMxQyxPQUFPO0lBQ1QsQ0FBQztJQUVNLDBDQUFVLEdBQWpCLFVBQWtCLE1BQWMsRUFBRSxVQUFlO1FBQy9DLE9BQU87SUFDVCxDQUFDO0lBRU0saURBQWlCLEdBQXhCLFVBQXlCLFVBQWU7UUFDdEMsT0FBTztJQUNULENBQUM7SUFDSCw0QkFBQztBQUFELENBQUMsQUFyQkQsQ0FBMkMsa0NBQW1CLEdBcUI3RDtBQXJCWSxxQkFBcUI7SUFEakMsaUJBQVUsRUFBRTtxQ0FHZSwyQkFBWTtHQUYzQixxQkFBcUIsQ0FxQmpDO0FBckJZLHNEQUFxQiIsInNvdXJjZXNDb250ZW50IjpbIi8vIGFuZ3VsYXJcclxuaW1wb3J0IHsgSW5qZWN0YWJsZSB9IGZyb20gJ0Bhbmd1bGFyL2NvcmUnO1xyXG5cclxuLy8gbGlic1xyXG5pbXBvcnQgeyBBbmd1bGFydGljczIsIEFuZ3VsYXJ0aWNzMlNlZ21lbnQgfSBmcm9tICdhbmd1bGFydGljczInO1xyXG5cclxuLy8gVE9ETzogVGhpcyBpcyBhIHdpcCBhdCB0aGUgbW9tZW50XHJcbi8vIFdpbGwgaW1wbGVtZW50IG5hdGl2ZSBzZWdtZW50IHNkayBzb29uXHJcbi8vIGh0dHBzOi8vZ2l0aHViLmNvbS9OYXRoYW5XYWxrZXIvbmF0aXZlc2NyaXB0LXNlZ21lbnQvaXNzdWVzLzFcclxuXHJcbkBJbmplY3RhYmxlKClcclxuZXhwb3J0IGNsYXNzIE5TQW5ndWxhcnRpY3MyU2VnbWVudCBleHRlbmRzIEFuZ3VsYXJ0aWNzMlNlZ21lbnQge1xyXG5cclxuICBjb25zdHJ1Y3Rvcihhbmd1bGFydGljczI6IEFuZ3VsYXJ0aWNzMikge1xyXG4gICAgc3VwZXIoYW5ndWxhcnRpY3MyKTtcclxuICAgIGFuZ3VsYXJ0aWNzMi5wYWdlVHJhY2suc3Vic2NyaWJlKCh4OiBhbnkpID0+IHRoaXMucGFnZVRyYWNrKHgucGF0aCwgeC5sb2NhdGlvbikpO1xyXG4gICAgYW5ndWxhcnRpY3MyLmV2ZW50VHJhY2suc3Vic2NyaWJlKCh4OiBhbnkpID0+IHRoaXMuZXZlbnRUcmFjayh4LmFjdGlvbiwgeC5wcm9wZXJ0aWVzKSk7XHJcbiAgICBhbmd1bGFydGljczIuc2V0VXNlclByb3BlcnRpZXMuc3Vic2NyaWJlKCh4OiBhbnkpID0+IHRoaXMuc2V0VXNlclByb3BlcnRpZXMoeCkpO1xyXG4gICAgYW5ndWxhcnRpY3MyLnNldFVzZXJQcm9wZXJ0aWVzT25jZS5zdWJzY3JpYmUoKHg6IGFueSkgPT4gdGhpcy5zZXRVc2VyUHJvcGVydGllcyh4KSk7XHJcbiAgfVxyXG5cclxuICBwdWJsaWMgcGFnZVRyYWNrKHBhdGg6IHN0cmluZywgbG9jYXRpb246IGFueSkge1xyXG4gICAgLy8gVE9ET1xyXG4gIH1cclxuXHJcbiAgcHVibGljIGV2ZW50VHJhY2soYWN0aW9uOiBzdHJpbmcsIHByb3BlcnRpZXM6IGFueSkge1xyXG4gICAgLy8gVE9ET1xyXG4gIH1cclxuXHJcbiAgcHVibGljIHNldFVzZXJQcm9wZXJ0aWVzKHByb3BlcnRpZXM6IGFueSkge1xyXG4gICAgLy8gVE9ET1xyXG4gIH1cclxufVxyXG4iXX0=
