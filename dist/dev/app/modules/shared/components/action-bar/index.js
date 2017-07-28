@@ -1,6 +1,0 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var action_bar_component_1 = require("./action-bar.component");
-exports.ActionBarComponent = action_bar_component_1.ActionBarComponent;
-
-//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC9tb2R1bGVzL3NoYXJlZC9jb21wb25lbnRzL2FjdGlvbi1iYXIvaW5kZXgudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSwrREFBNEQ7QUFBbkQsb0RBQUEsa0JBQWtCLENBQUEiLCJmaWxlIjoiYXBwL21vZHVsZXMvc2hhcmVkL2NvbXBvbmVudHMvYWN0aW9uLWJhci9pbmRleC5qcyIsInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCB7IEFjdGlvbkJhckNvbXBvbmVudCB9IGZyb20gJy4vYWN0aW9uLWJhci5jb21wb25lbnQnO1xyXG4iXX0=

@@ -1,6 +1,0 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var button_component_1 = require("./button.component");
-exports.ButtonComponent = button_component_1.ButtonComponent;
-
-//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC9tb2R1bGVzL3NoYXJlZC9jb21wb25lbnRzL2J1dHRvbi9pbmRleC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLHVEQUFxRDtBQUE1Qyw2Q0FBQSxlQUFlLENBQUEiLCJmaWxlIjoiYXBwL21vZHVsZXMvc2hhcmVkL2NvbXBvbmVudHMvYnV0dG9uL2luZGV4LmpzIiwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0IHsgQnV0dG9uQ29tcG9uZW50IH0gZnJvbSAnLi9idXR0b24uY29tcG9uZW50JztcclxuIl19

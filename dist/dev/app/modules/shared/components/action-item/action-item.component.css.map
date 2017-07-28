@@ -1,1 +1,0 @@
-{"version":3,"sources":["app/modules/shared/components/action-item/action-item.component.scss"],"names":[],"mappings":"AAAA;EACE,sBAAoB;EACpB,cAAY,EACb","file":"action-item.component.css","sourcesContent":[":host {\r\n  display:inline-block;\r\n  padding:12px;\r\n}\r\n"]}

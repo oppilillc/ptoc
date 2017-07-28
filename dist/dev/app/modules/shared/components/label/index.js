@@ -1,6 +1,0 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var label_component_1 = require("./label.component");
-exports.LabelComponent = label_component_1.LabelComponent;
-
-//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC9tb2R1bGVzL3NoYXJlZC9jb21wb25lbnRzL2xhYmVsL2luZGV4LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEscURBQW1EO0FBQTFDLDJDQUFBLGNBQWMsQ0FBQSIsImZpbGUiOiJhcHAvbW9kdWxlcy9zaGFyZWQvY29tcG9uZW50cy9sYWJlbC9pbmRleC5qcyIsInNvdXJjZXNDb250ZW50IjpbImV4cG9ydCB7IExhYmVsQ29tcG9uZW50IH0gZnJvbSAnLi9sYWJlbC5jb21wb25lbnQnO1xyXG4iXX0=

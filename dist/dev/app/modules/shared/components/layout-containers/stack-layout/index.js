@@ -1,6 +1,0 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var stack_layout_component_1 = require("./stack-layout.component");
-exports.StackLayoutComponent = stack_layout_component_1.StackLayoutComponent;
-
-//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC9tb2R1bGVzL3NoYXJlZC9jb21wb25lbnRzL2xheW91dC1jb250YWluZXJzL3N0YWNrLWxheW91dC9pbmRleC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLG1FQUFnRTtBQUF2RCx3REFBQSxvQkFBb0IsQ0FBQSIsImZpbGUiOiJhcHAvbW9kdWxlcy9zaGFyZWQvY29tcG9uZW50cy9sYXlvdXQtY29udGFpbmVycy9zdGFjay1sYXlvdXQvaW5kZXguanMiLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgeyBTdGFja0xheW91dENvbXBvbmVudCB9IGZyb20gJy4vc3RhY2stbGF5b3V0LmNvbXBvbmVudCc7XHJcbiJdfQ==

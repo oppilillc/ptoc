@@ -1,7 +1,0 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var home_routes_1 = require("./home/home.routes");
-var about_routes_1 = require("./about/about.routes");
-exports.routes = home_routes_1.HomeRoutes.concat(about_routes_1.AboutRoutes);
-
-//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFwcC9jb21wb25lbnRzL2FwcC5yb3V0ZXMudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFDQSxrREFBZ0Q7QUFDaEQscURBQW1EO0FBRXRDLFFBQUEsTUFBTSxHQUNkLHdCQUFVLFFBQ1YsMEJBQVcsRUFDZCIsImZpbGUiOiJhcHAvY29tcG9uZW50cy9hcHAucm91dGVzLmpzIiwic291cmNlc0NvbnRlbnQiOlsiLy8gYXBwXHJcbmltcG9ydCB7IEhvbWVSb3V0ZXMgfSBmcm9tICcuL2hvbWUvaG9tZS5yb3V0ZXMnO1xyXG5pbXBvcnQgeyBBYm91dFJvdXRlcyB9IGZyb20gJy4vYWJvdXQvYWJvdXQucm91dGVzJztcclxuXHJcbmV4cG9ydCBjb25zdCByb3V0ZXM6IEFycmF5PGFueT4gPSBbXHJcbiAgLi4uSG9tZVJvdXRlcyxcclxuICAuLi5BYm91dFJvdXRlc1xyXG5dO1xyXG4iXX0=
