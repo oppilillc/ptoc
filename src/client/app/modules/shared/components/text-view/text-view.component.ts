@@ -8,4 +8,5 @@ import { Component, Input } from '@angular/core';
 })
 export class TextViewComponent {
   @Input() text: string;
+   @Input() hint: string;
 }

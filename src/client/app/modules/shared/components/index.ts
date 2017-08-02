@@ -9,6 +9,7 @@ import {ListViewComponent} from './list-view/list-view.component';
 import {TextViewComponent} from './text-view/text-view.component';
 import {TextFieldComponent} from './text-field/text-field.component';
 import {StackLayoutComponent} from './layout-containers/stack-layout/stack-layout.component';
+import {GridLayoutComponent} from './layout-containers/grid-layout/grid-layout.component';
 import {SharedService} from '../shared/index';
 
 
@@ -27,6 +28,7 @@ components = [
     	ImageComponent,
     	ListViewComponent,
     	StackLayoutComponent,
+    	GridLayoutComponent,
     	TextViewComponent,
     	TextFieldComponent
 ];
