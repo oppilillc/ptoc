@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   moduleId: module.id,
@@ -9,4 +9,8 @@ import { Component, Input } from '@angular/core';
 export class TextViewComponent {
   @Input() text: string;
    @Input() hint: string;
+   @Output() value = new EventEmitter(); 
+   change(newValue) {
+   	this.value.emit(newValue); 
+   }
 }
